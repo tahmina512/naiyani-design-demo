@@ -1,0 +1,98 @@
+<div class="login-container">
+  <img class="logo" src="assets/images/naiyani-logo.png" alt="Logo" />
+  <ng-container *ngIf="!showSignUpForm; else signupFormTemplate">
+    <!-- Login Form -->
+    <div>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" formControlName="username" />
+        </div>
+        <div
+          class="error-message"
+          *ngIf="
+            loginForm.get('username').invalid &&
+            (loginForm.get('username').dirty ||
+              loginForm.get('username').touched)
+          "
+        >
+          Username is required.
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" formControlName="password" />
+        </div>
+        <div
+          class="error-message"
+          *ngIf="
+            loginForm.get('password').invalid &&
+            (loginForm.get('password').dirty ||
+              loginForm.get('password').touched)
+          "
+        >
+          Password is required
+        </div>
+        <button type="submit" [disabled]="loginForm.invalid">Login</button>
+      </form>
+      <p class="switch-link">
+        Don't have an account yet?
+        <a (click)="switchToSignupForm()" class="custom-link">Create one</a>
+      </p>
+    </div>
+  </ng-container>
+
+  <ng-template #signupFormTemplate>
+    <!-- Signup Form -->
+    <div>
+      <form [formGroup]="signupForm" (ngSubmit)="signup()">
+        <div class="form-group">
+          <label for="signup-username">Username</label>
+          <input
+            type="text"
+            id="signup-username"
+            formControlName="signupUsername"
+          />
+        </div>
+        <div
+          class="error-message"
+          *ngIf="
+            signupForm.get('signupUsername').invalid &&
+            (signupForm.get('signupUsername').dirty ||
+              signupForm.get('signupUsername').touched)
+          "
+        >
+          Username is required.
+        </div>
+
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <input
+            type="password"
+            id="signup-password"
+            formControlName="signupPassword"
+          />
+        </div>
+        <div
+          class="error-message"
+          *ngIf="
+            signupForm.get('signupPassword').invalid &&
+            (signupForm.get('signupPassword').dirty ||
+              signupForm.get('signupPassword').touched)
+          "
+        >
+          <ul class="error-list">
+            <li>must be at least 5 characters long</li>
+            <li>must contains uppercase</li>
+            <li>must contains lowercase</li>
+            <li>must contains atleast one special character</li>
+          </ul>
+        </div>
+        <button type="submit" [disabled]="signupForm.invalid">Sign Up</button>
+      </form>
+      <p class="switch-link">
+        Already have an account?
+        <a (click)="switchTologinForm()" class="custom-link">Log in.</a>
+      </p>
+    </div>
+  </ng-template>
+</div>
