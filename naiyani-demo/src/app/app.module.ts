@@ -14,7 +14,12 @@ import { AppRoutingModule } from './app.routing.module';
     LandingPageComponent,
     ProductDatabaseComponent,
   ],
-  imports: [BrowserModule,AppRoutingModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+  
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

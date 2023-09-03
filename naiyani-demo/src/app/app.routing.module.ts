@@ -6,7 +6,7 @@ import { AuthComponent } from './auth/auth.component';
 import { ProductDatabaseComponent } from './product-database/product-database.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 const appRoutes: Routes = [
-//   { path: '', component: LandingPageComponent },
+  { path: '', component: LandingPageComponent },
   { path: 'signin', component: AuthComponent },
   { path: 'product-demo', component: ProductDatabaseComponent },
   //   {

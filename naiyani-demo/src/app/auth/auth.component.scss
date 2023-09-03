@@ -3,14 +3,16 @@ $raleway-font: "Raleway", sans-serif;
 .login-container {
   @each $property, $value in $flex-center-styles {
     #{$property}: $value;
+    height: 65vh;
   }
   .logo {
-    width: 400px;
+    width: 30%;
     height: 100px;
     margin-bottom: 20px;
   }
 
   .form-group {
+    margin-top: 25px;
     position: relative;
     display: flex;
     align-items: center;
