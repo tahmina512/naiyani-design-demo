@@ -11,6 +11,8 @@ export class AuthComponent implements OnInit {
   loginForm: FormGroup;
   signupForm: FormGroup;
   showSignUpForm: boolean = false;
+  showAlert: boolean = false;
+  alertMessage: string = '';
 
   constructor(private fb: FormBuilder, private router: Router) {}
 
@@ -35,7 +37,18 @@ export class AuthComponent implements OnInit {
     });
   }
   login() {
-    this.router.navigate(['/product-demo']);
+    if (this.loginForm.valid) {
+      const username = this.loginForm.get('username').value;
+      const password = this.loginForm.get('password').value;
+      if (password === 'Tahmina123@') {
+        this.router.navigate(['/product-demo']);
+        } else {
+        this.alertMessage = 'Wrong Password! Please try again';
+         this.showAlert = true;
+      }
+      // }
+      // this.router.navigate(['/product-demo']);
+    }
   }
   signup() {
     this.router.navigate(['/product-demo']);
@@ -45,5 +58,8 @@ export class AuthComponent implements OnInit {
   }
   switchTologinForm() {
     this.showSignUpForm = false;
+  }
+  closeAlert() {
+    this.showAlert = false;
   }
 }

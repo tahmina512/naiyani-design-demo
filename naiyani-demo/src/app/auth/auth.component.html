@@ -1,4 +1,7 @@
 <div class="login-container">
+  <ng-container *ngIf="showAlert">
+    <app-alert [message]="alertMessage" (close)="closeAlert()"></app-alert>
+  </ng-container>
   <img class="logo" src="assets/images/naiyani-logo.png" alt="Logo" />
   <ng-container *ngIf="!showSignUpForm; else signupFormTemplate">
     <!-- Login Form -->
