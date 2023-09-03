@@ -15,10 +15,10 @@ import {
       state('in', style({ opacity: 1 })),
       transition(':enter', [
         style({ opacity: 0 }),
-        animate('500ms ease-in-out'), // Adjust the duration here (500ms)
+        animate('3000ms ease-in-out'), // Adjust the duration here (500ms)
       ]),
       transition(':leave', [
-        animate('500ms ease-in-out', style({ opacity: 0 })), // Adjust the duration here (500ms)
+        animate('3000ms ease-in-out', style({ opacity: 0 })), // Adjust the duration here (500ms)
       ]),
     ]),
   ],
