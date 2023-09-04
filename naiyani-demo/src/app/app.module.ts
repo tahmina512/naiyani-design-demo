@@ -8,6 +8,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ProductDatabaseComponent } from './product-database/product-database.component';
 import { AppRoutingModule } from './app.routing.module';
 import { AlertComponent } from './shared/alert/alert.component';
+import { ButtonSigninComponent } from './button-signin/button-signin.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { AlertComponent } from './shared/alert/alert.component';
     AuthComponent,
     LandingPageComponent,
     ProductDatabaseComponent,
-    AlertComponent
+    AlertComponent,
+    ButtonSigninComponent,
   ],
   imports: [
     BrowserModule,

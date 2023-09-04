@@ -29,11 +29,11 @@ export class LandingPageComponent {
   // logoState = 'in'; // Initial state
   constructor(private router: Router) {}
   ngOnInit(): void {
-    if (this.router.url !== '/signin') {
-      setTimeout(() => {
-        // Navigate to the second page
-        this.router.navigate(['/signin']);
-      }, 7000);
-    }
-  }
+  //   if (this.router.url !== '/signin') {
+  //     setTimeout(() => {
+  //       // Navigate to the second page
+  //       this.router.navigate(['/signin']);
+  //     }, 7000);
+  //   }
+   }
 }

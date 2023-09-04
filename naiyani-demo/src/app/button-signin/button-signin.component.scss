@@ -1,0 +1,87 @@
+@import "src/app/shared/variables.scss";
+.button-container {
+  @each $property, $value in $flex-center-styles {
+    #{$property}: $value;
+    height: 100vh;
+  }
+}
+
+.logo-container,
+.buttons-container {
+  text-align: center;
+  position: relative;
+}
+
+.logo {
+  margin-bottom: 10px;
+  width: 298px;
+  height: 85px;
+}
+
+.gradient-button {
+  padding: 15px 140px;
+  border: none;
+  border-radius: 12px;
+  background-image: linear-gradient(to right, #000, #444, #777);
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+  margin-top: 25px;
+  opacity: 0; /* Initially hide the buttons */
+}
+
+/* Animation for username button */
+@keyframes appearUsernameButton {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for password button */
+@keyframes appearPasswordButton {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.username-button {
+  animation: appearUsernameButton 1s ease forwards;
+  animation-delay: 2s; /* Delay the appearance of username button after logo */
+}
+
+.password-button {
+  animation: appearPasswordButton 1s ease forwards;
+  animation-delay: 3s; /* Delay the appearance of password button after logo */
+}
+@media (max-width: 768px) {
+    /* Adjust the styles for screens up to 768px wide */
+    .button-container {
+      margin: 10px;
+    }
+    .logo {
+      width: auto;
+    }
+
+    .gradient-button {
+      padding: 15px 120px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .gradient-button {
+      padding: 15px 100px;
+    }
+    .logo {
+      width: auto;
+    }
+  }
