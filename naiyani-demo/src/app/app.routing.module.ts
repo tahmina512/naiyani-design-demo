@@ -9,10 +9,6 @@ const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'signin', component: AuthComponent },
   { path: 'product-demo', component: ProductDatabaseComponent },
-  //   {
-  //     path: 'leads-list',
-  //     component: LeadsListComponent,
-  //   },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(appRoutes)],
