@@ -1,39 +1,27 @@
-import { Component } from '@angular/core';
-import {
-  trigger,
-  state,
-  style,
-  animate,
-  transition,
-} from '@angular/animations';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-landing-page',
   templateUrl: './landing-page.component.html',
   styleUrls: ['./landing-page.component.scss'],
-  // animations: [
-  //   trigger('fadeInOut', [
-  //     state('in', style({ opacity: 1 })),
-  //     transition(':enter', [
-  //       style({ opacity: 0 }),
-  //       animate('3000ms ease-in-out'), // Adjust the duration here (500ms)
-  //     ]),
-  //     transition(':leave', [
-  //       animate('3000ms ease-in-out', style({ opacity: 0 })), // Adjust the duration here (500ms)
-  //     ]),
-  //   ]),
-  // ],
 })
-export class LandingPageComponent {
+export class LandingPageComponent implements OnInit {
   logoUrl: string = 'assets/images/image001.gif';
-  // logoState = 'in'; // Initial state
+  moveLogo: boolean = false;
+
   constructor(private router: Router) {}
+
   ngOnInit(): void {
-  //   if (this.router.url !== '/signin') {
-  //     setTimeout(() => {
-  //       // Navigate to the second page
-  //       this.router.navigate(['/signin']);
-  //     }, 7000);
-  //   }
-   }
+    // Delay the animation
+    setTimeout(() => {
+      // Add the 'move-up' class to trigger the CSS animation
+      this.moveLogo = true;
+
+      // Navigate to the second page after a delay
+      setTimeout(() => {
+        this.router.navigate(['/signin-demo']);
+      }, 2500); // Adjust the delay as needed (1 second in this example)
+    }, 1000); // Adjust the delay as needed (2 seconds in this example)
+  }
 }
