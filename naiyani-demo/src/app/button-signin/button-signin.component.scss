@@ -16,7 +16,12 @@
   margin-bottom: 10px;
   width: 298px;
   height: 85px;
+  transition: transform 3s ease;
 }
+
+  .move-up {
+    transform: translateY(-20px); /* Move the logo up by 20px */
+  }
 
 .gradient-button {
   padding: 15px 140px;
@@ -42,7 +47,6 @@
   }
 }
 
-/* Animation for password button */
 @keyframes appearPasswordButton {
   0% {
     transform: translateY(100%);
@@ -55,33 +59,33 @@
 }
 
 .username-button {
-  animation: appearUsernameButton 1s ease forwards;
-  animation-delay: 2s; /* Delay the appearance of username button after logo */
+  animation: appearUsernameButton 1.5s ease forwards;
+  animation-delay: 1s; /* Delay the appearance of username button after logo */
 }
 
 .password-button {
-  animation: appearPasswordButton 1s ease forwards;
-  animation-delay: 3s; /* Delay the appearance of password button after logo */
+  animation: appearPasswordButton 1.5s ease forwards;
+  animation-delay: 2s; /* Delay the appearance of password button after logo */
 }
 @media (max-width: 768px) {
-    /* Adjust the styles for screens up to 768px wide */
-    .button-container {
-      margin: 10px;
-    }
-    .logo {
-      width: auto;
-    }
-
-    .gradient-button {
-      padding: 15px 120px;
-    }
+  /* Adjust the styles for screens up to 768px wide */
+  .button-container {
+    margin: 10px;
+  }
+  .logo {
+    width: auto;
   }
 
-  @media (max-width: 480px) {
-    .gradient-button {
-      padding: 15px 100px;
-    }
-    .logo {
-      width: auto;
-    }
+  .gradient-button {
+    padding: 15px 120px;
   }
+}
+
+@media (max-width: 480px) {
+  .gradient-button {
+    padding: 15px 100px;
+  }
+  .logo {
+    width: auto;
+  }
+}

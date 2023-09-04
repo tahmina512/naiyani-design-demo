@@ -1,30 +1,3 @@
-@import "src/app/shared/variables.scss";
-.logo-container {
-  @each $property, $value in $flex-center-styles {
-    #{$property}: $value;
-    height: 100vh;
-  }
-   /* Set the background color to white */
-  .logo {
-    width: auto;
-    height: auto;
-    cursor: pointer;
-  }
-  @media (max-width: 768px) {
-    .logo {
-      width: 150px;
-      height: 75px;
-      margin: 0;
-      padding: 0;
-    }
-    @media (max-width: 1170px) {
-      .logo {
-        width: 200px;
-        height: auto;
-      }
-    }
-  }
-}
 /* landing-page.component.scss */
 @import "src/app/shared/variables.scss";
 
@@ -38,11 +11,24 @@
     width: auto;
     height: auto;
     cursor: pointer;
-    transition: transform 4s ease; /* Adjust the duration for the animation speed */
+    transition: transform 4s ease; /* Adjust the duration for the move-up animation */
   }
 
   .move-up {
-    transform: translateY(-40px); /* Move the logo up by 20px */
+    transform: translateY(-20px); /* Move the logo up by 20px */
+  }
+  /* Define the fade-out animation */
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fade-out {
+    animation: fadeOut 5s ease forwards; /* Adjust the duration for the fade-out animation */
   }
 
   .logo-img {

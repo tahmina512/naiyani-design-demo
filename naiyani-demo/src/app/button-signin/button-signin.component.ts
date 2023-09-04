@@ -9,15 +9,18 @@ export class ButtonSigninComponent {
   // Initially hide the buttons
   showUsernameButton = false;
   showPasswordButton = false;
+  moveLogo: boolean = false;
 
   constructor() {
     setTimeout(() => {
       this.showUsernameButton = true;
-    }, 1000); 
+    }, 3000);
 
     setTimeout(() => {
       this.showPasswordButton = true;
-    }, 1500); 
+    }, 3500);
+     setTimeout(() => {
+       this.moveLogo = true;
+     }, 3200);
   }
-  
 }
