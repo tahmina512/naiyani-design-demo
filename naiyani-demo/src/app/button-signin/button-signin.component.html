@@ -1,14 +1,55 @@
-<div class="button-container">
+<!-- <div class="button-container">
   <div class="logo-container">
-    <img class="logo" src="assets/images/new.png" alt="Logo" [class.move-up]="moveLogo"/>
+    <img
+      class="logo"
+      src="assets/images/1.1.png"
+      alt="Logo"
+      [class.move-up]="moveLogo"
+    />
   </div>
   <div class="buttons-container">
     <div>
-      <button class="gradient-button black-to-ash username-button">USERNAME</button>
+      <button class="gradient-button black-to-ash username-button">
+        USERNAME
+      </button>
     </div>
     <div>
-      <button class="gradient-button black-to-ash password-button">PASSWORD</button>
+      <button class="gradient-button black-to-ash password-button">
+        PASSWORD
+      </button>
+    </div>
+  </div>
+</div> -->
+<div class="button-container">
+  <div class="svg-wrapper">
+    <svg
+      height="75"
+      width="320"
+      xmlns="http://www.w3.org/2000/svg"
+      [class.move-up]="moveLogo"
+    >
+      <text
+        class="text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+      >
+        NAIYANI
+      </text>
+      <rect class="shape" height="75" width="320" />
+    </svg>
+  </div>
+  <div class="buttons-container">
+    <div>
+      <button class="gradient-button black-to-ash username-button">
+        USERNAME
+      </button>
+    </div>
+    <div>
+      <button class="gradient-button black-to-ash password-button">
+        PASSWORD
+      </button>
     </div>
   </div>
 </div>
-

@@ -1,0 +1,119 @@
+.svg-wrapper {
+  position: relative;
+  // top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  width: 320px;
+  // transform: scaleY(-1) scaleX(-1);
+}
+.move-up {
+  animation: moveUpAnimation 10s ease forwards; /* Slow upward animation */
+  transform-origin: center bottom;
+}
+
+@keyframes moveUpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-115px); /* Adjust the final position as needed */
+  }
+}
+
+.new-svg-text {
+  font-family: "Raleway", sans-serif;
+
+  font-size: 38px;
+
+  line-height: 32px;
+  font-weight: bolder;
+  letter-spacing: 8px;
+
+  color: #000000;
+
+  position: relative;
+
+  overflow: hidden;
+
+  border-right: 0.15em solid white; /* The typwriter cursor */
+
+  white-space: nowrap; /* Keeps the content on a single line */
+  top: -48px;
+
+  position: relative;
+  // animation: typing 3.5s steps(20, end), blink-caret 0.1s step-end infinite;
+}
+
+// /* The typing effect */
+// @keyframes typing {
+//   from {
+//     width: 0;
+//   }
+//   to {
+//     width: 100%;
+//   }
+// }
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  10% {
+    border-color: transparent;
+  }
+}
+// @keyframes animatedStroke {
+//   0% {
+//     stroke-width: 6px;
+//     stroke-dashoffset: -467;
+//     stroke-dasharray: 140 540;
+//   }
+//   50% {
+//     stroke-width: 6px;
+//     stroke-dashoffset: 0;
+//     stroke-dasharray: 760;
+//   }
+//   100% {
+//     stroke-width: 6px;
+//     stroke-dashoffset: -467;
+//     stroke-dasharray: 140 540;
+//   }
+//   // 99.99% {
+//   //   stroke-width: 5px;
+//   //   stroke-dashoffset: 0;
+//   //   stroke-dasharray: 760;
+//   // }
+//   // 99.99% {
+//   //   stroke-width: 5px;
+//   //   stroke-dashoffset: -467;
+//   //   stroke-dasharray:  140 540;
+// }
+@keyframes animatedStroke {
+  0% {
+    stroke-width: 6px;
+    stroke-dashoffset: -465; /* Set to negative path length */
+    stroke-dasharray: 140 790; /* Set to the path length */
+  }
+  50% {
+    stroke-width: 6px;
+    stroke-dashoffset: 0;
+    stroke-dasharray: 790;
+  }
+  100% {
+    stroke-width: 6px;
+    stroke-dashoffset: -465;
+    stroke-dasharray: 140 790;
+  }
+}
+.shape {
+  transform: scaleY(-1) scaleX(-1);
+  transform-origin: center center;
+  fill: transparent;
+  stroke: #000000;
+  animation: animatedStroke 4s linear infinite; /* Adjust duration as needed */
+}

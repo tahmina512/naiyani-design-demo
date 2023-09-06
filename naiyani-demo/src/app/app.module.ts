@@ -10,6 +10,10 @@ import { AppRoutingModule } from './app.routing.module';
 import { AlertComponent } from './shared/alert/alert.component';
 import { ButtonSigninComponent } from './button-signin/button-signin.component';
 
+import { LogoOneComponent } from './logo-one/logo-one.component';
+import { FirstpageComponent } from './firstpage/firstpage.component';
+import { SiginWithImgComponent } from './sigin-with-img/sigin-with-img.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +22,9 @@ import { ButtonSigninComponent } from './button-signin/button-signin.component';
     ProductDatabaseComponent,
     AlertComponent,
     ButtonSigninComponent,
+    LogoOneComponent,
+    FirstpageComponent,
+    SiginWithImgComponent
   ],
   imports: [
     BrowserModule,

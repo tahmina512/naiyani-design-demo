@@ -11,12 +11,14 @@
     width: auto;
     height: auto;
     cursor: pointer;
-    transition: transform 4s ease; /* Adjust the duration for the move-up animation */
   }
 
   .move-up {
-    transform: translateY(-20px); /* Move the logo up by 20px */
+    transform: translateY(-75px); /* Move the logo up by 20px */
+    transition: transform 4s ease;
+    
   }
+
   /* Define the fade-out animation */
   @keyframes fadeOut {
     0% {
@@ -28,7 +30,7 @@
   }
 
   .fade-out {
-    animation: fadeOut 5s ease forwards; /* Adjust the duration for the fade-out animation */
+    animation: fadeOut 2s ease forwards; /* Apply the fadeOut animation */
   }
 
   .logo-img {
@@ -38,15 +40,15 @@
 
   @media (max-width: 768px) {
     .logo {
-      width: 150px;
-      height: 75px;
+      width: auto;
+      height: auto;
       margin: 0;
       padding: 0;
     }
 
     @media (max-width: 1170px) {
       .logo {
-        width: 200px;
+        width: auto;
         height: auto;
       }
     }

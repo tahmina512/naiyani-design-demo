@@ -1,0 +1,50 @@
+.svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed */
+  width: 100%; /* Adjust the width as needed */
+}
+.text {
+  font-family: "Raleway", sans-serif;
+  font-size: 38px;
+  line-height: 32px;
+  letter-spacing: 8px;
+  color: #fff;
+  position: relative;
+  font-weight: bolder;
+}
+
+.svg-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust the height as needed */
+  width: 100%; /* Adjust the width as needed */
+}
+
+.shape {
+  stroke-dasharray: 140 540;
+  stroke-dashoffset: -88;
+  stroke-width: 6px;
+  top: -48px;
+  fill: transparent;
+  stroke: black;
+  transition: stroke-dashoffset 1s, stroke-dasharray 1s;
+  animation: animateShape 3s ease-in-out infinite; /* Infinite animation on page load */
+}
+.svg-wrapper:hover .shape {
+
+  stroke-dashoffset: 0;
+  stroke-dasharray: 760;
+}
+
+@keyframes animateShape {
+  0% {
+    stroke-dashoffset: -176;
+
+  }
+  100% {
+    stroke-dashoffset: 352;
+  }
+}

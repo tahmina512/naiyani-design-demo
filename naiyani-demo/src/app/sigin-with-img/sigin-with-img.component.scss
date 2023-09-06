@@ -12,16 +12,17 @@
   position: relative;
 }
 
-// .logo {
-//   margin-bottom: 10px;
-//   width: 300px;
-//   height: 85px;
-//   transition: transform 3s ease;
-// }
+.logo {
+  margin-bottom: 10px;
+  width: 300px;
+  height: 88px;
+  transition: transform 3s ease;
+}
 .text {
   font-size: 38px;
   line-height: 32px;
   letter-spacing: 8px;
+  color: #fff;
   font-weight: bolder;
 }
 
@@ -47,7 +48,7 @@
 }
 
 .gradient-button {
-  padding: 18px 155px;
+  padding: 18px 150px;
   border: none;
   border-radius: 12px;
   background-image: linear-gradient(to right, #000, #444, #777);
