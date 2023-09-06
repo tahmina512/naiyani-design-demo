@@ -1,3 +1,10 @@
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -5,6 +12,13 @@ import { Router } from '@angular/router';
   selector: 'app-firstpage',
   templateUrl: './firstpage.component.html',
   styleUrls: ['./firstpage.component.scss'],
+  animations: [
+    trigger('moveAndFade', [
+      state('initial', style({ transform: 'translateY(0)', opacity: 1 })),
+      state('moved', style({ transform: 'translateY(-90px)', opacity: 0 })),
+      transition('initial => moved', [animate('5s ease')]),
+    ]),
+  ],
 })
 export class FirstpageComponent implements OnInit {
   moveLogo: boolean = false;
@@ -12,12 +26,9 @@ export class FirstpageComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.moveLogo = true;
-
-      // Pause after fading out before navigating
       setTimeout(() => {
-        // Navigate to the sign-in page using Angular's router
         this.router.navigate(['/signin-demo']);
-      }, 4173);
-    }, 1500); // delay before the animation starts
+      }, 4100);
+    }, 2100); // delay before the animation starts
   }
 }

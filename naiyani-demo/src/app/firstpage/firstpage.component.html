@@ -3,7 +3,7 @@
     height="75"
     width="320"
     xmlns="http://www.w3.org/2000/svg"
-    [class.move-up]="moveLogo"
+    [@moveAndFade]="moveLogo ? 'moved' : 'initial'"
   >
     <rect class="shape" height="75" width="320" />
     <text
