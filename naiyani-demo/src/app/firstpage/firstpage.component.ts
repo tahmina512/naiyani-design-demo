@@ -17,7 +17,7 @@ export class FirstpageComponent implements OnInit {
       setTimeout(() => {
         // Navigate to the sign-in page using Angular's router
         this.router.navigate(['/signin-demo']);
-      }, 4185);
+      }, 4173);
     }, 1500); // delay before the animation starts
   }
 }
