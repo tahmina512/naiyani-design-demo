@@ -31,4 +31,7 @@ export class FirstpageComponent implements OnInit {
       }, 4100);
     }, 2100); // delay before the animation starts
   }
+  navaigateToSignIn() {
+    this.router.navigate(['/signin-demo']);
+  }
 }
