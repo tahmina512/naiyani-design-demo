@@ -21,11 +21,12 @@ import { Router } from '@angular/router';
   ],
 })
 export class FirstpageComponent implements OnInit {
-  moveLogo: boolean = false;
+  // moveLogo: boolean = false;
+  moveLogo: 'initial' | 'moved' = 'initial';
   constructor(private router: Router) {}
   ngOnInit(): void {
     setTimeout(() => {
-      this.moveLogo = true;
+      this.moveLogo = 'moved';
       setTimeout(() => {
         this.router.navigate(['/signin-demo']);
       }, 4100);

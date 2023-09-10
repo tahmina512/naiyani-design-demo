@@ -12,19 +12,19 @@
 // svg:hover {
 //   cursor: pointer;
 // }
-.move-up {
-  animation: moveUpAnimation 10s ease forwards; /* Slow upward animation */
-  transform-origin: center bottom;
-}
+// .move-up {
+//   animation: moveUpAnimation 10s ease forwards; /* Slow upward animation */
+//   transform-origin: center bottom;
+// }
 
-@keyframes moveUpAnimation {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(-115px); /* Adjust the final position as needed */
-  }
-}
+// @keyframes moveUpAnimation {
+//   0% {
+//     transform: translateY(0);
+//   }
+//   100% {
+//     transform: translateY(-115px); /* Adjust the final position as needed */
+//   }
+// }
 
 .new-svg-text {
   font-family: "Raleway", sans-serif;
