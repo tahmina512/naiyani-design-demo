@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sigin-with-img',
   templateUrl: './sigin-with-img.component.html',
   styleUrls: ['./sigin-with-img.component.scss'],
 })
-export class SiginWithImgComponent {
+export class SiginWithImgComponent implements OnInit {
   showUsernameButton = false;
   showPasswordButton = false;
   moveLogo: boolean = false;
 
-  constructor() {
+  constructor() {}
+  ngOnInit(): void {
     setTimeout(() => {
       this.showUsernameButton = true;
     }, 3000);

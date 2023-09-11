@@ -9,6 +9,7 @@ import { ButtonSigninComponent } from './button-signin/button-signin.component';
 import { LogoOneComponent } from './logo-one/logo-one.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { SiginWithImgComponent } from './sigin-with-img/sigin-with-img.component';
+import { LeadsListComponent } from './leads-list/leads-list.component';
 const appRoutes: Routes = [
   { path: '', component: FirstpageComponent },
   { path: 'signin', component: AuthComponent },
@@ -19,6 +20,10 @@ const appRoutes: Routes = [
   {
     path: 'landing',
     component: LandingPageComponent,
+  },
+  {
+    path: 'leads',
+    component: LeadsListComponent,
   },
 ];
 @NgModule({

@@ -1,0 +1,25 @@
+@import "src/app/shared/variables.scss";
+.button-container {
+  @each $property, $value in $flex-center-styles {
+    #{$property}: $value;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+  }
+
+.gradient-button {
+  height: 120px;
+  width: 120px;
+  border: none;
+  border-radius: 50%;
+  background-image: linear-gradient(to right, #000, #444, #777);
+  color: white;
+  font-size: 11px;
+  cursor: pointer;
+    margin-top: 35px;
+    margin-bottom: 30px;
+  
+}
+
+  //   opacity: 0; /* Initially hide the buttons */
+}
