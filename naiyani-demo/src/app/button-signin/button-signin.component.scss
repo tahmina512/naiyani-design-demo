@@ -12,12 +12,6 @@
   position: relative;
 }
 
-// .logo {
-//   margin-bottom: 10px;
-//   width: 300px;
-//   height: 85px;
-//   transition: transform 3s ease;
-// }
 .text {
   font-size: 38px;
   line-height: 32px;
@@ -59,18 +53,7 @@
 }
 
 /* Animation for username button */
-@keyframes appearUsernameButton {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes appearPasswordButton {
+@keyframes appearButtons {
   0% {
     transform: translateY(100%);
     opacity: 0;
@@ -82,12 +65,12 @@
 }
 
 .username-button {
-  animation: appearUsernameButton 1.5s ease forwards;
+  animation: appearButtons 1.5s ease forwards;
   animation-delay: 1s; /* Delay the appearance of username button after logo */
 }
 
 .password-button {
-  animation: appearPasswordButton 1.5s ease forwards;
+  animation: appearButtons 1.5s ease forwards;
   animation-delay: 2s; /* Delay the appearance of password button after logo */
 }
 @media (max-width: 768px) {
