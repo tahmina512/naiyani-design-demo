@@ -46,8 +46,7 @@ export class AuthComponent implements OnInit {
         this.alertMessage = 'Wrong Password! Please try again';
          this.showAlert = true;
       }
-      // }
-      // this.router.navigate(['/product-demo']);
+
     }
   }
   signup() {
